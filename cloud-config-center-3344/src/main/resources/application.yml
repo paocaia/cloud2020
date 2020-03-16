@@ -1,0 +1,21 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:TNoOne/cloud-config.git #github仓库上面的git仓库名字
+          ##搜索目录
+          search-paths:
+            - cloud-config
+      #读取分支
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka #注册进eureka
