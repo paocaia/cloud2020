@@ -11,6 +11,12 @@ spring:
       name: config #配置文件名称
       profile: dev #读取后缀名称 上述3个综合：master分支上config-dev.yml的配置文件被读取 http://config-3344.com:3344/master/config-dev.yml
       uri: http://localhost:3344 #配置中心地址
+  #rabbit相关配置 15672是web管理界面的端口，5672是MQ访问的端口
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 #服务注册到eureka地址
 eureka:
